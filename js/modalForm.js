@@ -1,13 +1,10 @@
-// Modal functionality
 const enrollmentModal = {
   init() {
-    // Initialize modal event listeners
     this.setupModalHandlers();
     this.setupEnrollmentButtons();
   },
 
   setupModalHandlers() {
-    // Close button handler
     const closeBtn = document.querySelector(".enrollment-close");
     if (closeBtn) {
       closeBtn.addEventListener("click", this.closeModal);
@@ -23,7 +20,6 @@ const enrollmentModal = {
   },
 
   setupEnrollmentButtons() {
-    // Handle all enrollment buttons on the page
     const enrollButtons = document.querySelectorAll(".enroll-button");
 
     enrollButtons.forEach((button) => {
@@ -41,11 +37,9 @@ const enrollmentModal = {
 
     if (modal) {
       modal.style.display = "block";
-      // If courseType is provided and courseSelect exists, set the value
       if (courseType && courseSelect) {
         courseSelect.value = courseType;
       }
-      // Prevent body scrolling when modal is open
       document.body.style.overflow = "hidden";
     }
   },
@@ -54,18 +48,15 @@ const enrollmentModal = {
     const modal = document.getElementById("enrollmentModal");
     if (modal) {
       modal.style.display = "none";
-      // Restore body scrolling when modal is closed
       document.body.style.overflow = "";
     }
   },
 };
 
-// Initialize modal functionality when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
   enrollmentModal.init();
 });
 
-// TEST
 document
   .querySelector(".enrollment-submit")
   .addEventListener("click", function (event) {
@@ -74,21 +65,21 @@ document
     const nameInput = document.querySelector("#EnrName");
     const phoneInput = document.querySelector("#EnrPhone");
     const emailInput = document.querySelector("#EnrEmail");
+    const courseInput = document.querySelector("#course");
 
-    // Проверка обязательных полей
-    if (!nameInput.value || !phoneInput.value || !emailInput.value) {
+    if (!nameInput.value || !phoneInput.value) {
       alert("Будь ласка, заповніть всі обов'язкові поля");
       return;
     }
 
-    // Добавить класс для индикации загрузки
     this.classList.add("loading");
     this.disabled = true;
 
-    const message = `🔔 Новое сообщение с сайта:
+    const message = `🔔 Заявка на курс:
     👤 Имя: ${nameInput.value}
     📱 Телефон: ${phoneInput.value}
-    💭 Сообщение: ${emailInput.value}`;
+    💭 Email: ${emailInput.value}
+    📚 Курс: ${courseInput.value}`;
 
     const token = "6477657010:AAGTuVDuds3Ip0TRTwFUs6wsudWdzx7wM2k";
     const chatId = "708915074";
@@ -114,12 +105,12 @@ document
       })
       .then((data) => {
         if (data.ok) {
-            enrollmentModal.closeModal();
+          enrollmentModal.closeModal();
           showModal();
           nameInput.value = "";
           phoneInput.value = "";
           emailInput.value = "";
-         
+
         }
       })
       .catch((error) => {
@@ -127,13 +118,11 @@ document
         alert("Виникла помилка при відправці. Спробуйте ще раз");
       })
       .finally(() => {
-        // Убрать индикацию загрузки
         this.classList.remove("loading");
         this.disabled = false;
       });
   });
 
-//TEST MODAL
 function showModal() {
   const modal = document.getElementById("myModal");
   modal.style.display = "block";
