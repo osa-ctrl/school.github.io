@@ -1991,6 +1991,13 @@ main {
   .enrollment-modal-content {
     margin: 18% auto;
   }
+  .courses .course .price.new {
+    font-size: 1.5em;
+  }
+  .testimonials .testimonial-header {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 /* Дополнительные медиа-запросы для специфических элементов */
 @media (max-width: 375px) {

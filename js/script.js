@@ -124,7 +124,7 @@ $(document).ready(function () {
     margin: 24,
     nav: true,
     dots: true,
-    autoplay: true,
+    autoplay: false,
     autoplayTimeout: 5000,
     autoplayHoverPause: true,
     navText: [
@@ -146,7 +146,6 @@ $(document).ready(function () {
       },
     },
     onInitialized: function () {
-      // Добавляем класс для анимации
       $(".testimonial-card").addClass("animate__animated animate__fadeIn");
     },
   });

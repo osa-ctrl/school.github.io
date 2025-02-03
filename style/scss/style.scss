@@ -195,8 +195,8 @@ main {
   height: 750px;
   padding-top: 100px;
   background: linear-gradient(to bottom,
-      rgb(202, 241, 240),
-      rgba(223, 241, 241, 0.479));
+          rgb(202, 241, 240),
+          rgba(223, 241, 241, 0.479));
 
   .s-first-container {
     max-width: 1280px;
@@ -260,17 +260,17 @@ main {
 
 .btn-orange {
   background-image: linear-gradient(to right,
-      rgb(252, 201, 1) 0%,
-      rgb(255, 210, 30) 50%,
-      rgb(238, 166, 84) 100%);
+          rgb(252, 201, 1) 0%,
+          rgb(255, 210, 30) 50%,
+          rgb(238, 166, 84) 100%);
   color: #251919;
 }
 
 .btn-red {
   background-image: linear-gradient(to right,
-      #ff3d00 0%,
-      #ff5722 50%,
-      #ff0000 100%);
+          #ff3d00 0%,
+          #ff5722 50%,
+          #ff0000 100%);
   color: #fff;
 }
 
@@ -297,8 +297,8 @@ main {
   width: 581px;
   height: 581px;
   background: radial-gradient(50% 50% at 50% 50%,
-      rgb(203, 241, 240) 55%,
-      rgb(224, 249, 248) 100%);
+          rgb(203, 241, 240) 55%,
+          rgb(224, 249, 248) 100%);
   border-radius: 50%;
   position: relative;
   flex-shrink: 0;
@@ -650,8 +650,8 @@ main {
 .learning-process {
   padding: 80px 0;
   background: linear-gradient(to bottom,
-      rgb(202, 241, 240),
-      rgba(223, 241, 241, 0.479));
+          rgb(202, 241, 240),
+          rgba(223, 241, 241, 0.479));
 
   .section-title {
     text-align: center;
@@ -1244,8 +1244,8 @@ main {
 .testimonials {
   padding: 80px 0;
   background: linear-gradient(to bottom,
-      rgb(202, 241, 240),
-      rgba(223, 241, 241, 0.479));
+          rgb(202, 241, 240),
+          rgba(223, 241, 241, 0.479));
 
   .testimonials-container {
     max-width: 1280px;
@@ -1981,7 +1981,7 @@ main {
     transform: translateZ(0);
     transition: transform 500ms;
 
-    i{
+    i {
       font-size: 1.7em;
       color: white;
     }
@@ -1991,14 +1991,14 @@ main {
 .enrollment-modal-header {
   margin-bottom: 20px;
 
-  h2{
+  h2 {
     margin: 0;
-  color: #334155;
-  font-size: 24px;
-  text-align: center;
+    color: #334155;
+    font-size: 24px;
+    text-align: center;
   }
 
-  p{
+  p {
     color: #64748b;
     font-size: 16px;
     text-align: center;
@@ -2032,7 +2032,7 @@ main {
   color: #333;
   margin-bottom: 5px;
 
-  i{
+  i {
     color: rgb(59 130 246);
     margin-right: 5px;
   }
@@ -2138,7 +2138,7 @@ main {
     gap: 40px;
   }
 
-  .enrollment-modal-content{
+  .enrollment-modal-content {
     margin: 7% auto;
   }
 }
@@ -2279,7 +2279,7 @@ main {
     font-size: 0.9em;
   }
 
-  .enrollment-modal-content{
+  .enrollment-modal-content {
     margin: 15% auto;
   }
 }
@@ -2344,8 +2344,17 @@ main {
     padding: 20px;
   }
 
-  .enrollment-modal-content{
+  .enrollment-modal-content {
     margin: 18% auto;
+  }
+
+  .courses .course .price.new {
+    font-size: 1.5em;
+  }
+
+  .testimonials .testimonial-header{
+    flex-direction: column;
+    gap: 10px;
   }
 }
 
