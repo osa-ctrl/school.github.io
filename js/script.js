@@ -124,7 +124,7 @@ $(document).ready(function () {
     margin: 24,
     nav: true,
     dots: true,
-    autoplay: false,
+    autoplay: true,
     autoplayTimeout: 5000,
     autoplayHoverPause: true,
     navText: [
